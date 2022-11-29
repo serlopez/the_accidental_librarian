@@ -1,0 +1,23 @@
+body {
+    font-family: 'VT323';
+    font-size: 48px;
+}
+
+.avatar {grid-area: avatar;}
+.key {grid-area: key;}
+.score {grid-area: score;}
+.character-name {grid-area: character-name;}
+.output {grid-area: output;}
+.input-1 {grid-area: input-1;}
+.input-2 {grid-area: input-2;}
+.input-3 {grid-area: input-3;}
+.input-4 {grid-area: input-4;}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'avatar key key score'
+    'avatar output output output'
+    'character-name output output output'
+    'input-1 input-1 input-2 input-2'
+    'input-3 input-3 input-4 input-4';    
+}
