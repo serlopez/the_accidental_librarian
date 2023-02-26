@@ -1,4 +1,5 @@
 const textElement = document.getElementById('text');
+const avatarImage = document.getElementById('avatar');
 const optionButtonsElement = document.getElementById('option-buttons');
 
 let state = {};
@@ -21,6 +22,7 @@ function selectOption(option){
 function showTextNode(textNodeIndex){
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
     textElement.innerText = textNode.text;
+    avatarImage.innerHTML = textNode.avatar;
     while(optionButtonsElement.firstChild){
         optionButtonsElement.removeChild(optionButtonsElement.firstChild);
     }
@@ -44,6 +46,7 @@ const textNodes = [
     {
         id: 1,
         text: 'this is a piece of text',
+        avatar: '<img src=images/bust_male.png>',
         options: [
             {
                 text: 'choose option 1',
@@ -60,6 +63,7 @@ const textNodes = [
     {
         id: 2,
         text: 'this is the text for node 2',
+        avatar: '<img src=images/bust_male.png>',
         options: [
             {
                 text: 'choose node 3',
@@ -81,6 +85,7 @@ const textNodes = [
     {
         id: 3,
         text: 'this is the text for node 3',
+        avatar: '<img src=images/bust_male.png>',
         options: [
             {
                 text: 'choose node 4',
@@ -102,6 +107,7 @@ const textNodes = [
     {
         id: 4,
         text: 'this is the end of the game',
+        avatar: '<img src=images/bust_female.png>',
         options: [
             {
                 text: 'choose option 1',
